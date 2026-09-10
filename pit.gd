@@ -1,9 +1,10 @@
 extends Area2D
 
 @export var player: CharacterBody2D
+@export var forced_direction: Vector2
 const SPEED = 150.0
-var x: int
-var y: int
+var x = forced_direction.x
+var y = forced_direction.y
 
 func _ready() -> void:
 	body_entered.connect(_on_pit_body_entered)
